@@ -1,0 +1,21 @@
+[package]
+name = "fee-lens-core"
+description = "The Solana fee model: base fee, priority fee and tips across legacy, v0 and v1 transactions."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[dependencies]
+bs58.workspace = true
+serde.workspace = true
+# A JSON wire format needs a JSON value type: a transaction's error payload is
+# arbitrary JSON, and it is rendered to a string at the normalisation boundary
+# so the domain types stay free of it.
+serde_json.workspace = true
+thiserror.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,7 @@
+# Pinned so that a clone, a contributor and CI all compile with the same
+# compiler and lint against the same clippy. Tracking `stable` instead means a
+# new release can fail the build on a lint that did not exist when the code was
+# written, which is exactly what happened here once.
+[toolchain]
+channel = "1.99.1"
+components = ["rustfmt", "clippy"]
